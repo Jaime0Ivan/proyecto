@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Ejemplo</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Nombre: Jaime Ivan Ambrocio Hernandez</h1>
+            <p>9°- A</p>
+        </div>
+
+        <div class="card">
+            <h2>Imagen de ejemplo</h2>
+            <img src="{{ url_for('static', filename='images/img1.jpg') }}" alt="Ejemplo de imagen">
+        </div>
+
+        <div class="card">
+            <h2>Formulario</h2>
+            <form action="/submit" method="post">
+                <label for="name">User:</label>
+                <input type="text" id="name" name="name">
+                <label for="group">Password:</label>
+                <input type="text" id="group" name="group">
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
